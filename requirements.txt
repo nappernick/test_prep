@@ -1,0 +1,6 @@
+uuid
+flask_sqlalchemy
+flasgger
+flask
+sqlalchemy-stubs
+jinja2

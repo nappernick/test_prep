@@ -1,0 +1,43 @@
+/* styles.css */
+.diagram-container {
+  width: 100%;
+  height: 600px;
+  background: #f0f0f0;
+  position: relative;
+}
+
+/* Target the canvas element */
+/* canvas, .css-12q0bj3, [class*="css-"] {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  border: 1px solid green !important;
+} */
+
+/* Target the node elements */
+[class*="node "] {
+  visibility: visible !important;
+  display: block !important;
+  overflow: visible !important;
+  min-width: 100px !important;
+  min-height: 40px !important;
+  border: 1px dashed blue !important;
+  z-index: 9999;
+}
+/* .default-node, canvas, .css-12q0bj3, [class*="css-"] {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  position: relative;
+  z-index: 10;
+} */
+
+/* .custom-node {
+  width: 100% !important;
+  height: 100% !important;
+  visibility: visible !important;
+  display: block !important;
+  overflow: visible !important;
+  border: 1px dashed blue !important;
+  z-index: 9999;
+} */
