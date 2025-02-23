@@ -11,7 +11,7 @@ from uuid import uuid4
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///diagnostics.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(app.instance_path, "diagnostics.db")
 db = SQLAlchemy(app)
 Model = db.Model
 
