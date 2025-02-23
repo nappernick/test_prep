@@ -26,7 +26,7 @@ const WizardApp: React.FC = () => {
   useEffect(() => {
     setLoadingScenarios(true);
     axios
-      .get("https://api-0ltv:5000/api/wizard/scenarios")
+      .get("http://api-0ltv:5000/api/wizard/scenarios")
       .then((response) => {
         setScenarios(response.data);
       })

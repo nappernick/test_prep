@@ -3,11 +3,10 @@ info:
   version: "1.0.0"
   title: "Diagnostic API"
   description: "API for diagnostic challenges and system design assessments"
-host: "https://api-0ltv:5000"
+host: "api-0ltv:5000"
 basePath: "/api"
 schemes:
   - "http"
-  - "https"
 paths:
   /coding_challenge:
     get:

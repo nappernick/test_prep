@@ -178,3 +178,5 @@ dist
 .vscode/
 .mypy_cache/
 **code_files**
+**/build/
+bun.lockb

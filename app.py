@@ -35,7 +35,7 @@ TEMPLATES = {
   <ul>
     {% for sc in scenarios %}
       <li>
-        <a href="{{ url_for('show_step', scenario_id=sc.id, # type: ignore step_num=1) }}">
+        <a href="{{ url_for('show_step', scenario_id=sc.id, step_num=1) }}">
           {{ sc.title }}
         </a> - {{ sc.description }}
       </li>
@@ -268,8 +268,10 @@ def setup_db_once():
             # Scenario 5: Scalable Video Streaming Service
             scenario5 = Scenario(
                 title="Design a Scalable Video Streaming Service",
-                description=("Design a video streaming service that can handle live and on-demand content. "
-                             "Consider video encoding, content delivery networks (CDNs), scalability, latency, and user experience.")
+                description=(
+                  "Design a video streaming service that can handle live and on-demand content. "
+                             "Consider video encoding, content delivery networks (CDNs), scalability, latency, and user experience."
+                             )
             )
             db.session.add(scenario5)
             db.session.commit()
@@ -1129,4 +1131,4 @@ swagger_config = {
 swagger = Swagger(app, config=swagger_config)
 
 if __name__ == '__main__':
-    app.run(debug=False, host='https://api-0ltv', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)

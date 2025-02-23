@@ -22,11 +22,21 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
     "react-scripts": "^5.0.1",
-    "uuid": "^11.1.0"
+    "uuid": "^11.1.0",
+    "ajv": "^8.11.0"
   },
   "scripts": {
     "start": "bun run react-scripts start",
-    "build": "bun run react-scripts build"
+    "build": "bun run react-scripts build",
+    "preinstall": "bun pm trust --all",
+    "clean": "rm -rf node_modules bun.lockb",
+    "install:dependencies": "bun install",
+    "verify-env": "node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\"",
+    "check-deps": "bun check",
+    "audit": "npm audit",
+    "robust-setup": "echo 'Starting robust setup...' && bun pm trust --all && echo 'Cleaning previous installations...' && rm -rf node_modules bun.lockb && echo 'Installing dependencies...' && bun install && echo 'Verifying environment variables...' && node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\" && echo 'Checking dependency integrity...' && bun check && echo 'Running npm audit...' && npm audit && echo 'Building project...' && react-scripts build && echo 'Build completed successfully.'",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
