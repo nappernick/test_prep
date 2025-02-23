@@ -1129,4 +1129,4 @@ swagger_config = {
 swagger = Swagger(app, config=swagger_config)
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='https://api-0ltv', port=5000)

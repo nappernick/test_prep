@@ -31,7 +31,7 @@ export const SystemDesignWizard: React.FC<SystemDesignWizardProps> = ({ scenario
   useEffect(() => {
     // fetch scenario steps using scenario.id
     axios
-      .get<WizardStep[]>(`http://localhost:5000/api/wizard/scenario/${scenario.id}/steps`)
+      .get<WizardStep[]>(`https://api-0ltv:5000/api/wizard/scenario/${scenario.id}/steps`)
       .then(res => {
         setSteps(res.data);
       })
@@ -44,7 +44,7 @@ export const SystemDesignWizard: React.FC<SystemDesignWizardProps> = ({ scenario
     if (!steps.length) return;
     const step = steps[currentStepIndex];
     // post userResponse
-    axios.post("http://localhost:5000/api/wizard/submit_response", {
+    axios.post("https://api-0ltv:5000/api/wizard/submit_response", {
       scenario_id: scenario.id,
       step_id: step.id,
       user_response: userResponse
