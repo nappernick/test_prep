@@ -34,7 +34,7 @@
     "verify-env": "node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\"",
     "check-deps": "bun check",
     "audit": "npm audit",
-    "robust-setup": "echo 'Starting robust setup...' && bun pm trust --all && echo 'Cleaning previous installations...' && rm -rf node_modules bun.lockb && echo 'Installing dependencies...' && bun install && echo 'Verifying environment variables...' && node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\" && echo 'Checking dependency integrity...' && bun check && echo 'Running npm audit...' && npm audit && echo 'Building project...' && react-scripts build && echo 'Build completed successfully.'",
+    "robust-setup": "echo 'Starting robust setup...' && echo 'Cleaning previous installations...' && rm -rf node_modules bun.lockb && echo 'Installing dependencies...' && bun install && echo 'Verifying environment variables...' && node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\" && echo 'Checking dependency integrity...' && bun check && echo 'Running npm audit...' && npm audit && echo 'Building project...' && react-scripts build && echo 'Build completed successfully.'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
