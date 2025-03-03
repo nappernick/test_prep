@@ -28,7 +28,6 @@
   "scripts": {
     "start": "bun run react-scripts start",
     "build": "bun run react-scripts build",
-    "preinstall": "bun pm trust --all",
     "clean": "rm -rf node_modules bun.lockb",
     "install:dependencies": "bun install",
     "verify-env": "node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\"",
