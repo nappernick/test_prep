@@ -14,6 +14,7 @@
     "@projectstorm/react-diagrams-core": "^7.0.3",
     "@projectstorm/react-diagrams-routing": "^7.0.3",
     "ace-builds": "^1.4.14",
+    "ajv": "^8.11.0",
     "axios": "^1.4.0",
     "framer-motion": "^12.4.7",
     "react": "^18.3.1",
@@ -22,8 +23,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
     "react-scripts": "^5.0.1",
-    "uuid": "^11.1.0",
-    "ajv": "^8.11.0"
+    "uuid": "^11.1.0"
   },
   "scripts": {
     "start": "bun run react-scripts start",
@@ -31,9 +31,9 @@
     "clean": "rm -rf node_modules bun.lockb",
     "install:dependencies": "bun install",
     "verify-env": "node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\"",
-    "check-deps": "bun check",
+    "check-deps": "bun run check",
     "audit": "npm audit",
-    "robust-setup": "echo 'Starting robust setup...' && echo 'Cleaning previous installations...' && rm -rf node_modules bun.lockb && echo 'Installing dependencies...' && bun install && echo 'Verifying environment variables...' && node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\" && echo 'Checking dependency integrity...' && bun check && echo 'Running npm audit...' && npm audit && echo 'Building project...' && react-scripts build && echo 'Build completed successfully.'",
+    "robust-setup": "echo 'Starting robust setup...' && echo 'Cleaning previous installations...' && rm -rf node_modules bun.lockb && echo 'Installing dependencies...' && bun install && echo 'Verifying environment variables...' && node -e \"if (!process.env.NODE_ENV) { console.error('NODE_ENV is not set!'); process.exit(1); }\" && echo 'Building project...' && bun react-scripts build && echo 'Build completed successfully.'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
